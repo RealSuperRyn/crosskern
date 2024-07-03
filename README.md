@@ -5,6 +5,7 @@ Current supported architectures: x86_64
 
 # Building
 Clone the repository, and enter it.  
+Additionally, clone RealSuperRyn/crosshw, and have it be in the same directory as the crosskern repo.  
 Then, assuming you're in the root of the repository (important):  
 `cargo +nightly build --target ./x86_64-custom-linker.json -Zbuild-std=core,compiler_builtins --release`  
   
