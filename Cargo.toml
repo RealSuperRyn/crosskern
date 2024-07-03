@@ -3,11 +3,23 @@ name = "crosskern"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+limine = []
+debugger = []
+
 [dependencies]
+limine = "0.2.0"
+crosshw = { path = "../crosshw" }
+lazy_static = { version = "1.5.0", features = ["spin_no_std"] }
+spin = "0.9.8"
 
 [profile.release]
 panic = "abort"
-build-opt = "s"
 
 [profile.dev]
 panic = "abort"
+
+[[bin]]
+name = "crosskern"
+test = false
+bench = false
